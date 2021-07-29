@@ -42,6 +42,7 @@ class MainFragment : NikeFragment(),ProductListAdapter.ProductClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
       productAdapter.productClickListener=this
+        productAdapterMostSell.productClickListener=this
 
 
         mainViewModel.productLiveData.observe(this as LifecycleOwner){
