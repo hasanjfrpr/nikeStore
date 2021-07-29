@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/background_comment">
+
+
+    <TextView
+        android:id="@+id/TV_commentTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="commentTitle"
+        android:gravity="right"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintEnd_toStartOf="@+id/TV_commentDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TV_commentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        android:textColor="?android:textColorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TV_commentTitle"
+        tools:text="commentDate" />
+
+    <TextView
+        android:id="@+id/TV_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="TextView"
+        android:textAppearance="?textAppearanceBody2"
+        android:textColor="?android:textColorSecondary"
+        app:layout_constraintStart_toStartOf="@+id/TV_commentTitle"
+        app:layout_constraintTop_toBottomOf="@+id/TV_commentTitle" />
+
+    <TextView
+        android:id="@+id/TV_commentContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="right"
+        tools:text="واقعا یکی از بهترین کفش هاییه که تا حالا دیدم خیلی خوبه"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintEnd_toEndOf="@+id/TV_commentDate"
+        app:layout_constraintStart_toStartOf="@+id/TV_author"
+        app:layout_constraintTop_toBottomOf="@+id/TV_author" />
+</androidx.constraintlayout.widget.ConstraintLayout>

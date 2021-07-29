@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.main.auth.AuthActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:paddingVertical="32dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/ic_nike_logo"
+            app:tint="?android:colorBackground" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/createAccount"
+            android:textAppearance="?textAppearanceHeadline5"
+            android:textColor="?colorOnBackground" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/textUnderTextLogin"
+            android:textAppearance="?textAppearanceBody2"/>
+        <EditText
+            android:id="@+id/ET_username_signUp"
+            android:layout_width="@dimen/et_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            style="@style/Theme.nike.backgroundLogin.EditText"
+            android:hint="@string/etEmail"/>
+        <EditText
+            android:id="@+id/ET_password_signUp"
+            android:layout_width="@dimen/et_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/Theme.nike.backgroundLogin.EditText"
+            android:hint="@string/etPassword"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mBTN_signUp"
+            android:layout_width="@dimen/et_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/Theme.nike.backgroundLogin.materilBTN"
+            android:text="@string/textBTNUnderQuestion"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/createAccountQuestion"
+            android:textAppearance="?textAppearanceBody2"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mBTN_enter_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textBTNLoginCreate"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:textColor="?linkColor"/>
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

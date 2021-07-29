@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?windowBackGroundColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <com.google.android.material.appbar.AppBarLayout
+       android:id="@+id/appBar_cart"
+       android:layout_width="match_parent"
+       android:background="?android:colorBackground"
+       android:gravity="center"
+       android:elevation="4dp"
+       android:layout_height="?attr/actionBarSize">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/cart"
+           android:textStyle="bold"
+           android:textAppearance="@style/TextAppearance.MyTheme.Headline6"
+           android:layout_gravity="center"/>
+   </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/mBTN_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:text="@string/pay"
+        android:textAppearance="?textAppearanceHeadline6"
+        android:gravity="center"
+        android:backgroundTint="?colorPrimary"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

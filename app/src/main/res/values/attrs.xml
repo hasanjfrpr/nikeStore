@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="dividerColor" format="color"/>
+    <attr name="linkColor" format="color"/>
+    <attr name="windowBackGroundColor" format="color"/>
+
+</resources>

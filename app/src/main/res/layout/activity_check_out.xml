@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.main.checkout.CheckOutActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:backgroundTint="?android:colorBackground"
+        app:elevation="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="40dp"
+                android:text="@string/checkOutDetail"
+                android:textAppearance="?textAppearanceHeadline6" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/ic_back" />
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      android:layout_marginHorizontal="16dp"
+      android:layout_marginVertical="16dp"
+      android:orientation="vertical">
+      <com.google.android.material.card.MaterialCardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:cardElevation="16dp"
+          >
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <FrameLayout
+                  android:layout_width="match_parent"
+                  android:layout_marginHorizontal="16dp"
+                  android:layout_marginTop="32dp"
+                  android:layout_height="160dp">
+                  <TextView
+                      android:id="@+id/checkout_status_order_title"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      tools:text="خرید با موفقیت انجام شد"
+                      android:textColor="?colorSecondary"
+                      android:layout_marginTop="8dp"
+                      android:textStyle="bold"
+                      android:textAppearance="?textAppearanceHeadline5"
+                      android:layout_gravity="center_horizontal|top"/>
+                  <TextView
+                      android:id="@+id/checkout_payment_status"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/orderStatus"
+                      android:layout_gravity="bottom|start"
+                      android:layout_marginBottom="16dp"
+                      android:textColor="?android:textColorSecondary"
+                      android:textAppearance="?textAppearanceBody1"
+                      android:layout_marginStart="16dp"/>
+                  <TextView
+                      android:id="@+id/paymentStatus"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      tools:text="پرداخت موفق"
+                      android:layout_gravity="bottom|end"
+                      android:layout_marginBottom="16dp"
+                      android:textAppearance="?textAppearanceBody1"
+                      android:layout_marginEnd="16dp"/>
+
+
+              </FrameLayout>
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginHorizontal="16dp"
+                  android:background="?dividerColor"/>
+              <FrameLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginHorizontal="16dp">
+                  <TextView
+                      android:id="@+id/checkout_payment_price"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/priceOrder"
+                      android:textAppearance="?textAppearanceBody1"
+                      android:textColor="?android:textColorSecondary"
+                      android:layout_marginStart="16dp"
+                      android:layout_marginVertical="16dp"
+                      android:layout_gravity="center_vertical|start"/>
+                  <TextView
+                      android:id="@+id/paymentPrice"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      tools:text="1035465"
+                      android:textAppearance="?textAppearanceBody1"
+                      android:layout_marginEnd="16dp"
+                      android:layout_marginVertical="16dp"
+                      android:layout_gravity="center_vertical|end"/>
+
+              </FrameLayout>
+          </LinearLayout>
+
+      </com.google.android.material.card.MaterialCardView>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:layout_marginTop="16dp"
+       >
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/mBTN_return_home"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/returnHome"
+           android:layout_marginHorizontal="8dp"
+           android:textStyle="bold"
+           android:backgroundTint="?colorSecondary"
+           android:layout_marginStart="16dp"/>
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/mBTN_order_history"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="8dp"
+           android:textStyle="bold"
+           android:text="@string/orderHistory"
+           android:backgroundTint="?colorSecondary"
+           />
+   </LinearLayout>
+  </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">NikeStore</string>
+    <string name="profile">اطلاعات کاربری</string>
+    <string name="cart">سبد خرید</string>
+    <string name="home">خانه</string>
+    <string name="latest">جدیدترین</string>
+    <string name="viewAll">مشاهده همه</string>
+    <string name="mostSell">پرفروش ترین </string>
+    <string name="viewAllComments">مشاهده همه نظرات</string>
+    <string name="commentList">لیست نظرات</string>
+    <string name="productList">لیست محصولات</string>
+    <string name="sort"> مرتب سازی</string>
+    <string name="sortLatest">جدید ترین ها</string>
+    <string name="sortPopular">پربازدید ترین ها</string>
+    <string name="sortHighPrice">گران  ترین ها</string>
+    <string name="sortLowPrice">ارزان ترین ها</string>
+    <string name="addToCart">افزودن به سبد خرید</string>
+    <string name="unknownError">خطای نامشخص</string>
+    <string name="successAddToCart">به سبد خرید اضافه شد</string>
+    <string name="productDescription">یک محصول بینظیر برای پیاده روی و ورزش است که در تمامی رنگ ها برای تمامی سن ها موجود است همکنون با سفارش این محصول از پیاده روی لذت ببرید.</string>
+    <string-array name="sortModeArrayList">
+        <item name="Latest">جدید ترین ها</item>
+        <item name="Popular">پربازدید ترین ها</item>
+        <item name="HighPrice">گران  ترین ها</item>
+        <item name="LowPrice">ارزان ترین ها</item>
+    </string-array>
+
+    <string name="textUnderTextLogin">ایمل و رمز عبور را وارد کنید</string>
+    <string name="textLogin">ورود به حساب کاربری</string>
+    <string name="etEmail">ایمیل</string>
+    <string name="etPassword">رمزعبور</string>
+    <string name="textBTNLogin">ورود</string>
+    <string name="textBTNLoginCreate">ورود به حساب</string>
+    <string name="questionLogin">ایا حساب کاربری دارید؟</string>
+    <string name="textBTNUnderQuestion">ثبت نام</string>
+    <string name="createAccount">ایجاد حساب کاربری</string>
+    <string name="createAccountQuestion">قبلا ثبت نام کرده اید؟</string>
+    <string name="pay">پرداخت</string>
+    <string name="count">تعداد</string>
+    <string name="deleteFromPurchaseBasket">حذف از سبد خرید</string>
+    <string name="purchaseDetail">جزئیات خرید</string>
+    <string name="totalPrice">مبلغ کل خرید</string>
+    <string name="payAblePrice">مبلغ قابل پرداخت</string>
+    <string name="shippingPrice">هزینه ارسال</string>
+    <string name="EmptyStateMessage">لطفا وارد حساب کاربری خود شوید</string>
+    <string name="EmptyStateCallToAction">ورود به حساب کاربری</string>
+    <string name="cartEmptyState">هیچ خبری اینجا نیست</string>
+    <string name="shippingDetail">انتخاب تحویل گیرنده و شیوه پرداخت</string>
+    <string name="onlinePayment">پرداخت اینترنتی</string>
+    <string name="localPayment">پرداخت در محل</string>
+    <string name="name">نام</string>
+    <string name="lastName">نام خانوادگی</string>
+    <string name="postalCode">کد پستی</string>
+    <string name="address">آدرس</string>
+    <string name="phoneNumber">شماره موبایل</string>
+    <string name="checkOutDetail">رسید پرداخت</string>
+    <string name="returnHome">بازگشت به صفحه اصلی</string>
+    <string name="orderHistory">سوابق سفارش</string>
+    <string name="orderStatus">وضعیت سفارش</string>
+    <string name="priceOrder">مبلغ</string>
+    <string name="favoriteList">لیست علاقه مندی ها</string>
+    <string name="signOut">خروج از حساب</string>
+    <string name="GuestUser">کاربر مهمان</string>
+    <string name="showInfoFavorite">برای حذف هر آیتم انگشت خود را روی آن نگه دارید</string>
+    <string name="favoriteEmptyState">لیست علاقه مندی ها خالی است</string>
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="mynavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@color/navigationitem</item>
+        <item name="itemTextAppearanceActive">@style/myApearanceActive</item>
+        <item name="itemTextColor">@color/navigationitem</item>
+    </style>
+    <style name="myApearanceActive" parent="TextAppearance.MyTheme.Caption">
+        <item name="fontFamily">@font/yekan_bold</item>
+        <item name="android:fontFamily">@font/yekan_bold</item>
+    </style>
+
+    <style name="Theme.nike.backgroundLogin.EditText" parent="Theme.nike.backgroundLogin">
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/et_background_theme</item>
+        <item name="android:textColor">?colorOnBackground</item>
+        <item name="hintTextColor">#48ffffff</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textColorHint">#48ffffff</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="Theme.nike.backgroundLogin.materilBTN" parent="Theme.nike.backgroundLogin">
+        <item name="backgroundTint">?colorOnBackground</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">8dp</item>
+        <item name="fontFamily">@font/yekan_bold</item>
+    </style>
+
+    <style name="ProfileStyleTExtLink" parent="Theme.Digikala">
+        <item name="android:minHeight">46dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?textAppearanceBody1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+<style name="Avatar">
+    <item name="cornerSize">50%</item>
+</style>
+</resources>
