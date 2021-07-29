@@ -6,8 +6,7 @@ import io.reactivex.Single
 
 class CommentRepositoryImpl(val CommentRemote : CommentDataSource) : CommentRepository {
     override fun getAll(ProductId:Int): Single<List<Comment>> = CommentRemote.getAll(ProductId)
+    override fun insert(title: String, content: String, productId: Int): Single<Comment> = CommentRemote.insert(title,content,productId)
 
-    override fun insert(): Single<Comment> {
-        TODO("Not yet implemented")
-    }
+
 }

@@ -5,5 +5,5 @@ import io.reactivex.Single
 
 interface CommentDataSource {
     fun getAll(ProductId:Int) : Single<List<Comment>>
-    fun insert() : Single<Comment>
+    fun insert(title:String,content:String,ProductId: Int) : Single<Comment>
 }

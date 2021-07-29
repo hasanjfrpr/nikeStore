@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.digikala.R
 import com.example.digikala.common.*
 import com.example.digikala.data.repo.Comment
+import com.example.digikala.data.repo.Product
 import com.example.digikala.feature.main.auth.AuthActivity
 import com.example.digikala.feature.main.main.ProductListAdapter
 import com.example.digikala.feature.main.profile.CommentListAdapter
@@ -35,7 +36,7 @@ import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
-class ProductDetailActivity : NikeActivity() {
+class ProductDetailActivity : NikeActivity() , AddCommentDialog.DialogEvent {
     val loadingImageView: LoadingImageService by inject()
     val productDetailViewModel: ProductDetailViewModel by viewModel { parametersOf(intent.extras) }
     val adapter = CommentListAdapter(false)
@@ -49,6 +50,12 @@ class ProductDetailActivity : NikeActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_detail)
         setupToolBar()
+        var dialog = AddCommentDialog()
+        dialog.dialogEvent=this
+        add_comment.setOnClickListener {
+            dialog.show(supportFragmentManager,null)
+        }
+
 
 
 
@@ -130,5 +137,9 @@ class ProductDetailActivity : NikeActivity() {
     override fun onDestroy() {
         super.onDestroy()
         compositeDisposable.clear()
+    }
+
+    override fun addComment(title: String, content: String) {
+        productDetailViewModel.insetComment(title,content,productDetailViewModel.ProductLiveData.value!!.id!!)
     }
 }

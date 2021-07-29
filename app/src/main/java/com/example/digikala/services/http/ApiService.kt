@@ -31,6 +31,9 @@ interface ApiService {
     @GET("comment/list")
     fun getComment(@Query("product_id") ProductId: Int): Single<List<Comment>>
 
+    @POST("comment/add")
+    fun insert(@Body jsonObject: JsonObject) : Single<Comment>
+
     @POST("cart/add")
     fun addToCart(@Body jsonObject: JsonObject): Single<AddToCartResponse>
 

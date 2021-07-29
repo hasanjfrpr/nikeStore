@@ -1,5 +1,6 @@
 package com.example.digikala.feature.main.product
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -40,6 +41,11 @@ class ProductDetailViewModel(bundle:Bundle,private val commentRepository: Commen
         Log.i("producDetailViewModel",ProductLiveData.value!!.id!!.toString())
         return cartRepository
             .addToCArt(ProductLiveData.value!!.id!!.toInt()).toCompletable()
+    }
+
+    @SuppressLint("CheckResult")
+    fun insetComment(title:String, content:String, productId:Int) :Completable{
+       return commentRepository.insert(title,content,productId).toCompletable()
     }
 
 }
