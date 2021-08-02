@@ -5,6 +5,7 @@ import com.example.digikala.common.NikeSingleObserver
 import com.example.digikala.common.NikeViewModel
 import com.example.digikala.data.repo.Comment
 import com.example.digikala.data.repo.repo.CommentRepository
+import io.reactivex.Completable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
@@ -12,6 +13,9 @@ class AllCommentsListViewModel(val productId:Int,val commentRepo:CommentReposito
     val CommentListLiveData =MutableLiveData<List<Comment>>()
 
     init {
+      getAllComment()
+    }
+    fun getAllComment(){
         prograssBarLiveData.value=true
         commentRepo.getAll(productId)
             .subscribeOn(Schedulers.io())
@@ -23,5 +27,8 @@ class AllCommentsListViewModel(val productId:Int,val commentRepo:CommentReposito
                 }
 
             })
+    }
+    fun addComment(title:String , content:String ):Completable{
+        return commentRepo.insert(title,content,productId).toCompletable()
     }
 }

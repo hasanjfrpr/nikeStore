@@ -17,12 +17,16 @@ import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-class ProductDetailViewModel(bundle:Bundle,private val commentRepository: CommentRepository
+class ProductDetailViewModel(val bundle:Bundle,private val commentRepository: CommentRepository
 ,val cartRepository:CartRepository):NikeViewModel() {
     val ProductLiveData =MutableLiveData<Product>()
     val CommentLiveData = MutableLiveData<List<Comment>>()
 
     init {
+      getCommentList()
+    }
+
+    fun getCommentList(){
         ProductLiveData.value=bundle.getParcelable(EXTRA_KEY_DATA)
         prograssBarLiveData.value=true
         commentRepository.getAll(ProductLiveData.value!!.id!!)

@@ -26,9 +26,7 @@ var dialogEvent:DialogEvent?=null
         val title=view.findViewById<EditText>(R.id.ET_add_comment_title)
         val content=view.findViewById<EditText>(R.id.ET_add_comment_content)
         btn.setOnClickListener {
-            if (TokenContainer.token.isNullOrEmpty()){
-                startActivity(Intent(requireContext(),AuthActivity::class.java))
-            }else
+
             dialogEvent!!.addComment(title.text.toString(),content.text.toString())
             dismiss()
         }

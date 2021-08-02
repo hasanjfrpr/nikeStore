@@ -19,6 +19,7 @@ import com.example.digikala.R
 import com.example.digikala.common.*
 import com.example.digikala.data.repo.Comment
 import com.example.digikala.data.repo.Product
+import com.example.digikala.data.repo.TokenContainer
 import com.example.digikala.feature.main.auth.AuthActivity
 import com.example.digikala.feature.main.main.ProductListAdapter
 import com.example.digikala.feature.main.profile.CommentListAdapter
@@ -53,6 +54,9 @@ class ProductDetailActivity : NikeActivity() , AddCommentDialog.DialogEvent {
         var dialog = AddCommentDialog()
         dialog.dialogEvent=this
         add_comment.setOnClickListener {
+            if (TokenContainer.token.isNullOrEmpty()){
+                startActivity(Intent(this,AuthActivity::class.java))
+            }else
             dialog.show(supportFragmentManager,null)
         }
 
@@ -141,5 +145,15 @@ class ProductDetailActivity : NikeActivity() , AddCommentDialog.DialogEvent {
 
     override fun addComment(title: String, content: String) {
         productDetailViewModel.insetComment(title,content,productDetailViewModel.ProductLiveData.value!!.id!!)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(object : NikeCompletableObserver(compositeDisposable){
+                override fun onComplete() {
+                    productDetailViewModel.getCommentList()
+                    adapter.notifyDataSetChanged()
+                }
+
+            })
+
     }
 }
