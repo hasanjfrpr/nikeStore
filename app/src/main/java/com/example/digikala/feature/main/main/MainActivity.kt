@@ -1,6 +1,7 @@
 package com.example.digikala.feature.main.main
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -22,7 +23,7 @@ import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import org.koin.android.viewmodel.ext.android.viewModel
 
-class MainActivity : NikeActivity() {
+class MainActivity : AppCompatActivity() {
 
     private var currentNavController: LiveData<NavController>? = null
     val thisViewModel:MainActivityViewModel by viewModel()
